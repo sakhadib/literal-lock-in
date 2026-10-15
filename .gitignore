@@ -1,0 +1,23 @@
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.xdv
+paper/*.fls
+paper/*.fdb_latexmk
+
+# pubcheck scratch
+.pubcheck-work/
+.pubcheck-venv/
+
+# python
+__pycache__/
+*.py[cod]
+
+# notebooks
+.ipynb_checkpoints/
+
+# model/data caches produced by the Colab collection runs
+*/cache/
+logs/
