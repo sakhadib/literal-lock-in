@@ -1,0 +1,587 @@
+<div style="min-height:100vh;background:#ffffff;">
+<nav style="position:sticky;top:0;z-index:20;background:color-mix(in srgb,#ffffff 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--color-divider);">
+  <div style="max-width:1120px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+    <a href="#top" style="font-family:var(--font-heading);font-size:19px;font-weight:600;color:var(--color-text);text-decoration:none;letter-spacing:-0.01em;">Literal Lock-In</a>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;">
+      <a href="#abstract" style="color:var(--color-neutral-700);text-decoration:none;">Abstract</a>
+      <a href="#method" style="color:var(--color-neutral-700);text-decoration:none;">Method</a>
+      <a href="#results" style="color:var(--color-neutral-700);text-decoration:none;">Results</a>
+      <a href="#explore" style="color:var(--color-neutral-700);text-decoration:none;">Explore</a>
+      <a href="#cite" style="color:var(--color-neutral-700);text-decoration:none;">Cite</a>
+    </div>
+  </div>
+</nav>
+<header id="top" style="max-width:1000px;margin:0 auto;padding:56px 24px 36px;display:flex;flex-direction:column;align-items:center;text-align:center;">
+  <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:18px;">Research paper · arXiv:2610.22526 · cs.CL</div>
+  <h1 style="margin:0;font-family:var(--font-heading);font-weight:500;font-size:clamp(32px,4.4vw,54px);line-height:1.1;letter-spacing:-0.02em;text-wrap:balance;">Literal Lock-In: How Test Language Shifts Literal Attraction in Typed Decision Models on Bengali Idioms</h1>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));width:100%;max-width:720px;margin-top:32px;">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:4px;padding:4px 16px;">
+      <div style="font-size:19px;font-weight:600;">Adib Sakhawat<sup style="color:var(--color-accent-700);font-weight:400;">*</sup></div>
+      <div style="font-size:14px;color:var(--color-neutral-700);line-height:1.45;">Software Engineering Graduate</div>
+      <div style="font-size:14px;color:var(--color-neutral-700);line-height:1.45;">Islamic University of Technology</div>
+      <a href="mailto:adibsakhawat@iut-dhaka.edu" style="font-family:var(--font-mono);font-size:12px;">adibsakhawat@iut-dhaka.edu</a>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:4px;padding:4px 16px;">
+      <div style="font-size:19px;font-weight:600;">Syed Rifat Raiyan<sup style="color:var(--color-accent-700);font-weight:400;">*</sup></div>
+      <div style="font-size:14px;color:var(--color-neutral-700);line-height:1.45;">Lecturer, Dept. of CSE</div>
+      <div style="font-size:14px;color:var(--color-neutral-700);line-height:1.45;">Islamic University of Technology</div>
+      <a href="mailto:rifatraiyan@iut-dhaka.edu" style="font-family:var(--font-mono);font-size:12px;">rifatraiyan@iut-dhaka.edu</a>
+    </div>
+  </div>
+  <div style="margin-top:14px;font-size:13px;font-style:italic;color:var(--color-neutral-700);">* Equal contribution</div>
+  <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:26px;">
+    <a class="btn btn-primary blueprint" href="https://github.com/sakhadib/literal-lock-in" target="_blank" rel="noopener" style="padding:10px 18px;font-family:var(--font-mono);font-size:13px;color:#ffffff;text-decoration:none;"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>Code &amp; Data ↗</a>
+    <a class="btn btn-primary blueprint" href="https://arxiv.org/abs/2610.22526" target="_blank" rel="noopener" style="padding:10px 18px;font-family:var(--font-mono);font-size:13px;color:#ffffff;text-decoration:none;"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>Preprint (arXiv:2610.22526)</a>
+    <a class="btn btn-secondary" href="#cite" style="padding:10px 18px;font-family:var(--font-mono);font-size:13px;color:var(--color-text);text-decoration:none;">BibTeX</a>
+  </div>
+</header>
+<section style="max-width:1120px;margin:0 auto;padding:8px 24px 64px;">
+  <figure class="blueprint" style="margin:0;padding:clamp(20px,3vw,36px);">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;">
+      <div>
+        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Figure 1 · The model takes the words</div>
+        <div style="display:flex;align-items:baseline;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:14px;">
+          <span style="font-family:'Noto Serif Bengali',serif;font-size:clamp(40px,6vw,64px);line-height:1.1;">অগ্নিবল</span>
+          <span style="font-style:italic;font-size:22px;color:var(--color-neutral-700);">agni-bal</span>
+        </div>
+        <div style="margin-top:8px;font-size:16px;color:var(--color-neutral-800);"><span style="font-family:'Noto Serif Bengali',serif;">অগ্নি</span> (fire) + <span style="font-family:'Noto Serif Bengali',serif;">বল</span> (strength) &nbsp;→&nbsp; means <em>intense hunger</em></div>
+      </div>
+      <div style="display:flex;border:1px solid var(--color-divider);">
+        <button sc-camel-on-click="{{ heroBn }}" style="border:0;cursor:pointer;padding:9px 16px;font-family:var(--font-mono);font-size:12px;background:{{ heroBnBg }};color:{{ heroBnFg }};transition:background .3s;">Asked in Bengali</button>
+        <button sc-camel-on-click="{{ heroEn }}" style="border:0;border-left:1px solid var(--color-divider);cursor:pointer;padding:9px 16px;font-family:var(--font-mono);font-size:12px;background:{{ heroEnBg }};color:{{ heroEnFg }};transition:background .3s;">Asked in English</button>
+      </div>
+    </div>
+    <div style="margin-top:36px;display:grid;grid-template-columns:minmax(90px,140px) minmax(0,1fr);gap:18px 20px;align-items:center;">
+      <div></div>
+      <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-neutral-700);">
+        <span>← Literal gloss (fire + strength)</span><span>Figurative gold (intense hunger) →</span>
+      </div>
+      <sc-for list="{{ heroRows }}" as="r" hint-placeholder-count="3">
+        <div data-hero-row style="display:contents">
+        <div style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600;"><span style="color:{{ r.color }};font-size:14px;">{{ r.mk }}</span>{{ r.name }}</div>
+        <div style="position:relative;height:40px;border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);background:repeating-linear-gradient(90deg,transparent 0 calc(10% - 1px),var(--color-divider) calc(10% - 1px) 10%);">
+          <div style="position:absolute;top:50%;left:{{ r.left }};transform:translate(-50%,-50%);transition:left 1.1s cubic-bezier(.65,0,.25,1);display:flex;align-items:center;gap:8px;white-space:nowrap;flex-direction:{{ r.dir }};">
+            <span data-hero-dot style="width:16px;height:16px;border-radius:50%;background:{{ r.color }};box-shadow:0 0 0 4px #ffffff,0 0 0 5px {{ r.color }};"></span>
+            <span data-hero-label style="font-family:var(--font-mono);font-size:12px;color:var(--color-text);background:#ffffff;padding:2px 6px;">{{ r.label }}</span>
+          </div>
+        </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));border-top:1px solid var(--color-divider);">
+      <sc-for list="{{ heroLar }}" as="h" hint-placeholder-count="3">
+        <div data-hero-lar style="padding:16px 16px 0 0;">
+          <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-neutral-700);">{{ h.name }} · pool LAR</div>
+          <div style="font-family:var(--font-heading);font-size:34px;font-variant-numeric:tabular-nums;margin-top:4px;">{{ h.v }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <figcaption style="margin-top:20px;font-size:15px;line-height:1.55;color:var(--color-neutral-800);max-width:80ch;text-wrap:pretty;">With both readings in the option list, all three models select the literal gloss in Bengali, at p = 1.00, 0.97 and 0.36. Asked as the paired English entry, Lod-lille and Jev-1.13 recover and Laya-ml does not. Across the 3,265 paired items literal attraction falls from 0.731, 0.918 and 0.304 in Bengali to 0.379, 0.241 and 0.047 in English.</figcaption>
+  </figure>
+</section>
+<section id="abstract" style="border-top:1px solid var(--color-divider);">
+  <div style="max-width:1120px;margin:0 auto;padding:72px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:32px 64px;">
+    <div>
+      <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Abstract</div>
+    </div>
+    <p style="grid-column:span 2;margin:0;font-size:clamp(18px,1.6vw,21px);line-height:1.62;text-wrap:pretty;max-width:68ch;">Decision models, non-generative scorers that report a probability over caller-supplied options and emit no text, are increasingly deployed as routers, classifiers and guardrails. Because they generate nothing, rationales and chain-of-thought do not apply. We audit three: an encoder scorer, a decoder scorer and a closed API, entirely through interventions on the option set, using expert-annotated Bengali idioms carrying a gold figurative and a gold literal gloss. Dropping an idiom’s own literal gloss into the option list draws every arm toward it, taking 66% to 96% of each arm’s remaining Bengali errors. A model × language matrix over one shared item set shows how far this depends on the test language: every arm is 1.9 to 6.4 times more captured in Bengali than in English on the same paired entries, the commercial model’s apparent resistance is a property of its test language, and capability does not order the failure. Calibration degrades in all three arms under the same shift, and on the open arms confidence inverts, so gating on it is worse than gating at random. On a semantics-free option list, where accuracy is at chance, the best-calibrated arm still reports mean confidence 0.82. Code and data are available at <a href="https://github.com/sakhadib/literal-lock-in">github.com/sakhadib/literal-lock-in</a>.</p>
+  </div>
+</section>
+<section style="border-top:1px solid var(--color-divider);">
+  <div style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));">
+    <sc-for list="{{ findings }}" as="f" hint-placeholder-count="4">
+      <div style="padding:36px 24px;border-right:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);display:flex;flex-direction:column;gap:12px;">
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--color-accent-700);">{{ f.n }}</div>
+        <div style="font-family:var(--font-heading);font-size:44px;line-height:1;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;">{{ f.big }}</div>
+        <div style="font-size:16px;line-height:1.5;color:var(--color-neutral-800);text-wrap:pretty;">{{ f.text }}</div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+<section id="method" style="max-width:1120px;margin:0 auto;padding:96px 24px 40px;">
+  <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">§ 3–4 · Dataset and method</div>
+  <h2 style="margin:12px 0 0;font-size:clamp(28px,3.4vw,40px);font-weight:500;letter-spacing:-0.015em;max-width:24ch;text-wrap:balance;">The option list is the only intervention surface</h2>
+  <p style="margin:18px 0 0;font-size:18px;line-height:1.6;max-width:66ch;color:var(--color-neutral-800);text-wrap:pretty;">A decision model returns a probability distribution over exactly the options the caller supplies. It produces no text and, in the commercial case, exposes no weights. Bangla Bagdhara ships, for each of its 10,361 expert-annotated idioms, both a gold figurative meaning and a gold literal gloss: a ready-made, human-certified counterfactual distractor. Given an idiom, the model chooses its figurative meaning from k = 4 candidates. The distractor family is the independent variable; everything else is held fixed.</p>
+  <figure class="blueprint" style="margin:44px 0 0;padding:clamp(20px,3vw,32px);">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Figure 2 · The instrument in one view</div>
+    <div style="margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:0;border:1px solid var(--color-divider);">
+      <sc-for list="{{ stages }}" as="s" hint-placeholder-count="6">
+        <div data-stage style="position:relative;padding:18px 16px 20px;border-right:1px solid var(--color-divider);background:{{ s.bg }};transition:background .5s;min-height:150px;display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:11px;color:var(--color-accent-700);"><span>{{ s.n }}</span><span data-stage-dot style="opacity:{{ s.dot }};transition:opacity .4s;">●</span></div>
+          <div style="font-size:18px;font-weight:600;line-height:1.2;">{{ s.title }}</div>
+          <div style="font-size:14px;line-height:1.45;color:var(--color-neutral-800);">{{ s.body }}</div>
+          <div data-stage-bar style="position:absolute;left:0;bottom:0;height:2px;background:var(--color-accent);width:{{ s.bar }};transition:width 1.4s linear;"></div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:32px;align-items:start;">
+      <div>
+        <div style="font-size:17px;font-weight:600;">Five distractor families</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;">
+          <sc-for list="{{ families }}" as="fm" hint-placeholder-count="5">
+            <button data-family="{{ fm.code }}" style="cursor:pointer;padding:8px 12px;font-family:var(--font-mono);font-size:12px;border:1px solid {{ fm.bd }};background:{{ fm.bg }};color:{{ fm.fg }};border-radius:var(--radius-sm);transition:all .25s;" style-hover="border-color:var(--color-accent);">{{ fm.code }}</button>
+          </sc-for>
+        </div>
+        <p data-famdesc style="margin:16px 0 0;font-size:16px;line-height:1.55;color:var(--color-neutral-800);min-height:3em;">{{ famDesc }}</p>
+      </div>
+      <div>
+        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-neutral-700);margin-bottom:10px;">Option list for one item · k = 4, chance 0.250</div>
+        <div data-slots style="display:flex;flex-direction:column;gap:6px;">
+          <sc-for list="{{ famSlots }}" as="sl" hint-placeholder-count="4">
+            <div style="display:grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:10px;padding:10px 12px;border:1px solid {{ sl.bd }};background:{{ sl.bg }};transition:all .45s;">
+              <span style="font-family:var(--font-mono);font-size:12px;color:var(--color-neutral-700);">{{ sl.letter }}</span>
+              <span style="font-size:15px;">{{ sl.text }}</span>
+              <span style="font-family:var(--font-mono);font-size:11px;color:{{ sl.tagc }};">{{ sl.tag }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:36px;border-top:1px solid var(--color-divider);padding-top:24px;">
+      <div style="font-size:17px;font-weight:600;">Literal Attraction Rate</div>
+      <div style="margin-top:12px;font-size:22px;font-style:italic;">LAR = <span style="font-style:normal;">(1/N) Σ<sub style="font-size:13px;">i</sub></span> 𝟙[ arg max<sub style="font-size:13px;">o</sub> p<sub style="font-size:13px;">i</sub>(o) = ℓ<sub style="font-size:13px;">i</sub> ]</div>
+      <p style="margin:12px 0 0;font-size:15px;line-height:1.55;color:var(--color-neutral-800);max-width:72ch;">LAR is not 1 − accuracy: it isolates the errors that are specifically a literal reading, and has no floor, since a model that never reads literally scores 0 while still being wrong.</p>
+    </div>
+  </figure>
+  <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:40px;">
+    <div>
+      <div style="font-size:19px;font-weight:600;">Seven interventions, one variable each</div>
+      <div style="margin-top:14px;display:flex;flex-direction:column;">
+        <sc-for list="{{ experiments }}" as="e" hint-placeholder-count="7">
+          <div style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;padding:10px 0;border-bottom:1px solid var(--color-divider);font-size:15px;">
+            <span style="font-family:var(--font-mono);font-size:13px;color:var(--color-accent-700);">{{ e.id }}</span><span>{{ e.text }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:19px;font-weight:600;">Three model arms</div>
+      <div style="overflow-x:auto;margin-top:14px;">
+        <sc-raw-table style="width:100%;border-collapse:collapse;font-size:15px;font-variant-numeric:tabular-nums;">
+          <sc-raw-thead>
+            <sc-raw-tr style="border-bottom:1px solid var(--color-text);">
+              <sc-raw-th style="text-align:left;padding:8px 8px 8px 0;font-weight:400;font-family:var(--font-mono);font-size:11px;color:var(--color-neutral-700);"></sc-raw-th>
+              <sc-raw-th style="text-align:left;padding:8px;font-weight:600;"><span style="color:var(--color-accent-800);">●</span> Laya-ml</sc-raw-th>
+              <sc-raw-th style="text-align:left;padding:8px;font-weight:600;"><span style="color:var(--color-accent-500);">■</span> Lod-lille</sc-raw-th>
+              <sc-raw-th style="text-align:left;padding:8px;font-weight:600;"><span style="color:var(--color-neutral-500);">▲</span> Jev-1.13</sc-raw-th>
+            </sc-raw-tr>
+          </sc-raw-thead>
+          <sc-raw-tbody>
+            <sc-for list="{{ modelTable }}" as="row" hint-placeholder-count="6">
+              <sc-raw-tr style="border-bottom:1px solid var(--color-divider);">
+                <sc-raw-td style="padding:9px 8px 9px 0;font-family:var(--font-mono);font-size:12px;color:var(--color-neutral-700);">{{ row.k }}</sc-raw-td>
+                <sc-raw-td style="padding:9px 8px;">{{ row.a }}</sc-raw-td><sc-raw-td style="padding:9px 8px;">{{ row.b }}</sc-raw-td><sc-raw-td style="padding:9px 8px;">{{ row.c }}</sc-raw-td>
+              </sc-raw-tr>
+            </sc-for>
+          </sc-raw-tbody>
+        </sc-raw-table>
+      </div>
+      <p style="margin:14px 0 0;font-size:14px;line-height:1.5;color:var(--color-neutral-700);">Laya-ml is a bidirectional encoder scoring all options together from marker positions. Lod-lille is a decoder with independent-option scoring. Jev-1.13 is a closed commercial model behind a decisions API.</p>
+    </div>
+  </div>
+</section>
+<section id="results" style="max-width:1120px;margin:0 auto;padding:80px 24px 40px;">
+  <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">§ 5.1 · Literal capture</div>
+  <h2 style="margin:12px 0 0;font-size:clamp(28px,3.4vw,40px);font-weight:500;letter-spacing:-0.015em;max-width:26ch;text-wrap:balance;">The stronger model leads until the literal gloss appears</h2>
+  <p style="margin:18px 0 0;font-size:18px;line-height:1.6;max-width:66ch;color:var(--color-neutral-800);text-wrap:pretty;">Lod-lille is the stronger model on every non-literal condition, by up to +0.133. Insert the idiom’s own literal gloss and the ordering reverses: Lod-lille falls to 0.066, half of Laya-ml’s already-below-chance 0.136. A model can be selected as “better” on a conventional benchmark while being worse at what that benchmark proxies for.</p>
+  <div style="margin-top:44px;display:flex;flex-wrap:wrap;gap:40px;align-items:stretch;">
+    <figure data-reveal="ladder" class="blueprint" style="margin:0;padding:24px;flex:2 1 520px;min-width:0;">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Figure 3a · Accuracy by distractor family</div>
+        <div style="display:flex;gap:16px;font-size:13px;"><span><span style="color:var(--color-accent-800);">●</span> Laya-ml</span><span><span style="color:var(--color-accent-500);">■</span> Lod-lille</span><span style="color:var(--color-neutral-700);">- - chance 0.250</span></div>
+      </div>
+      <div style="position:relative;margin-top:28px;height:240px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;border-bottom:1px solid var(--color-text);">
+        <div style="position:absolute;left:0;right:0;bottom:41.6%;border-top:1px dashed var(--color-text);pointer-events:none;"></div>
+        <sc-for list="{{ ladder }}" as="g" hint-placeholder-count="5">
+          <div style="display:flex;align-items:flex-end;justify-content:center;gap:6px;height:100%;background:{{ g.bg }};">
+            <sc-for list="{{ g.bars }}" as="b" hint-placeholder-count="2">
+              <div style="position:relative;width:min(36px,40%);height:{{ b.h }};background:{{ b.color }};transition:height 1.1s cubic-bezier(.2,.7,.2,1) {{ b.delay }};">
+                <span style="position:absolute;bottom:100%;left:50%;transform:translateX(-50%);padding-bottom:4px;font-family:var(--font-mono);font-size:11px;white-space:nowrap;opacity:{{ b.op }};transition:opacity .6s 1s;">{{ b.v }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:8px;">
+        <sc-for list="{{ ladder }}" as="g" hint-placeholder-count="5">
+          <div style="text-align:center;font-family:var(--font-mono);font-size:12px;color:{{ g.lc }};">{{ g.label }}</div>
+        </sc-for>
+      </div>
+      <figcaption style="margin-top:18px;font-size:14px;line-height:1.5;color:var(--color-neutral-700);">888 shared items, paired McNemar p &lt; 0.001 on every row. Shaded columns contain the idiom’s own literal gloss; the sign of the difference reverses at that boundary.</figcaption>
+    </figure>
+    <figure data-reveal="lar" class="blueprint" style="margin:0;padding:24px;flex:1 1 300px;min-width:0;display:flex;flex-direction:column;">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Figure 3b · Where the errors go, D-LIT</div>
+      <div style="margin-top:22px;display:flex;flex-direction:column;gap:22px;">
+        <sc-for list="{{ decomp }}" as="d" hint-placeholder-count="2">
+          <div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600;margin-bottom:8px;"><span style="color:{{ d.color }};">{{ d.mk }}</span>{{ d.name }}</div>
+            <div style="display:flex;height:34px;border:1px solid var(--color-divider);overflow:hidden;">
+              <sc-for list="{{ d.segs }}" as="sg" hint-placeholder-count="3">
+                <div style="width:{{ sg.w }};background:{{ sg.bg }};color:{{ sg.fg }};display:flex;align-items:center;padding-left:6px;font-family:var(--font-mono);font-size:11px;white-space:nowrap;overflow:hidden;transition:width 1.2s cubic-bezier(.2,.7,.2,1);">{{ sg.v }}</div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:16px;font-size:13px;color:var(--color-neutral-700);">
+        <span><span style="display:inline-block;width:10px;height:10px;background:var(--color-accent-300);margin-right:5px;"></span>gold</span>
+        <span><span style="display:inline-block;width:10px;height:10px;background:var(--color-accent-800);margin-right:5px;"></span>literal</span>
+        <span><span style="display:inline-block;width:10px;height:10px;background:var(--color-neutral-200);margin-right:5px;"></span>other</span>
+      </div>
+      <figcaption style="margin-top:14px;font-size:14px;line-height:1.5;color:var(--color-neutral-700);">Gold / literal / other: Laya-ml 0.136 / 0.658 / 0.206; Lod-lille 0.066 / 0.885 / 0.050. The error is not diffuse. On the clearest items Laya-ml places p = 1.000 on the literal gloss.</figcaption>
+    </figure>
+  </div>
+</section>
+<section style="max-width:1120px;margin:0 auto;padding:64px 24px 40px;">
+  <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">§ 5.1 · Model × language matrix</div>
+  <h2 style="margin:12px 0 0;font-size:clamp(28px,3.4vw,40px);font-weight:500;letter-spacing:-0.015em;max-width:24ch;text-wrap:balance;">Capture tracks the language, not capability</h2>
+  <p style="margin:18px 0 0;font-size:18px;line-height:1.6;max-width:66ch;color:var(--color-neutral-800);text-wrap:pretty;">All six cells are measured on the same 3,265 items, built by one function from one seed. Every arm is far more captured in Bengali than in English (paired McNemar p &lt; 10<sup>−100</sup>). Lod-lille is more accurate than Laya-ml and more captured; Jev-1.13 is more accurate than both and less captured.</p>
+  <figure data-reveal="matrix" class="blueprint" style="margin:44px 0 0;padding:clamp(20px,3vw,32px);">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;">
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Figure 5 · Literal condition, n = 3,265 per cell</div>
+      <div style="display:flex;border:1px solid var(--color-divider);">
+        <button sc-camel-on-click="{{ mxLar }}" style="border:0;cursor:pointer;padding:8px 14px;font-family:var(--font-mono);font-size:12px;background:{{ mxLarBg }};color:{{ mxLarFg }};">Literal attraction</button>
+        <button sc-camel-on-click="{{ mxAcc }}" style="border:0;border-left:1px solid var(--color-divider);cursor:pointer;padding:8px 14px;font-family:var(--font-mono);font-size:12px;background:{{ mxAccBg }};color:{{ mxAccFg }};">Accuracy</button>
+      </div>
+    </div>
+    <div style="margin-top:28px;display:flex;flex-direction:column;gap:26px;">
+      <sc-for list="{{ matrix }}" as="m" hint-placeholder-count="3">
+        <div data-matrix-row style="display:grid;grid-template-columns:minmax(90px,130px) minmax(0,1fr) 84px;gap:8px 16px;align-items:center;">
+          <div style="grid-row:span 2;display:flex;align-items:center;gap:8px;font-size:16px;font-weight:600;"><span style="color:{{ m.color }};">{{ m.mk }}</span>{{ m.name }}</div>
+          <div style="position:relative;height:22px;background:repeating-linear-gradient(90deg,transparent 0 calc(25% - 1px),var(--color-divider) calc(25% - 1px) 25%);">
+            <div data-bn-bar style="position:absolute;left:0;top:0;bottom:0;width:{{ m.bnW }};background:{{ m.color }};transition:width 1.1s cubic-bezier(.2,.7,.2,1);"></div>
+          </div>
+          <div data-bn-val style="font-family:var(--font-mono);font-size:13px;font-variant-numeric:tabular-nums;">BN {{ m.bnV }}</div>
+          <div style="position:relative;height:22px;background:repeating-linear-gradient(90deg,transparent 0 calc(25% - 1px),var(--color-divider) calc(25% - 1px) 25%);">
+            <div data-en-bar style="position:absolute;left:0;top:0;bottom:0;width:{{ m.enW }};border:1px solid {{ m.color }};background:{{ m.hatch }};transition:width 1.1s cubic-bezier(.2,.7,.2,1) .15s;box-sizing:border-box;"></div>
+          </div>
+          <div data-en-val style="font-family:var(--font-mono);font-size:13px;font-variant-numeric:tabular-nums;">EN {{ m.enV }}</div>
+        </div>
+      </sc-for>
+      <div style="display:grid;grid-template-columns:minmax(90px,130px) minmax(0,1fr) 84px;gap:16px;">
+        <div></div>
+        <div style="position:relative;height:16px;font-family:var(--font-mono);font-size:11px;color:var(--color-neutral-700);">
+          <span style="position:absolute;left:0;">0</span><span style="position:absolute;left:25%;transform:translateX(-50%);">0.25</span><span style="position:absolute;left:50%;transform:translateX(-50%);">0.50</span><span style="position:absolute;left:75%;transform:translateX(-50%);">0.75</span><span style="position:absolute;right:0;">1.0</span>
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <figcaption style="margin-top:18px;font-size:14px;line-height:1.5;color:var(--color-neutral-700);">Solid bars Bengali, hatched bars English. Within-model language effect on LAR: +0.352, +0.677 and +0.256. On the 5,485 corpus items without an English parenthetical cue, Bengali capture is still 0.581 and 0.871 for the open arms.</figcaption>
+  </figure>
+</section>
+<section style="max-width:1120px;margin:0 auto;padding:64px 24px 40px;">
+  <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">§ 5.2 · Calibration</div>
+  <h2 style="margin:12px 0 0;font-size:clamp(28px,3.4vw,40px);font-weight:500;letter-spacing:-0.015em;max-width:24ch;text-wrap:balance;">Confidence is anti-diagnostic</h2>
+  <p style="margin:18px 0 0;font-size:18px;line-height:1.6;max-width:66ch;color:var(--color-neutral-800);text-wrap:pretty;">Both open models are more confident when captured than when correct. Restricting Laya-ml’s D-LIT to its most confident 5% gives 0.007 accuracy against 0.151 at full coverage, and Lod-lille answers every item in its most confident 35% incorrectly. Their multiclass Brier scores under D-LIT, 1.030 and 1.391, are worse than the 0.750 of a uniform four-way distribution.</p>
+  <div data-reveal="conf" style="margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:40px;">
+    <figure class="blueprint" style="margin:0;padding:24px;">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Table 2 · Mean confidence by outcome</div>
+      <div style="margin-top:24px;display:flex;flex-direction:column;gap:28px;">
+        <sc-for list="{{ confRows }}" as="c" hint-placeholder-count="3">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;gap:8px;">
+              <span style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600;"><span style="color:{{ c.color }};">{{ c.mk }}</span>{{ c.name }}</span>
+              <span style="font-family:var(--font-mono);font-size:11px;color:{{ c.vc }};">{{ c.verdict }}</span>
+            </div>
+            <div style="position:relative;height:28px;border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);">
+              <div style="position:absolute;top:50%;height:2px;background:var(--color-neutral-300);left:{{ c.lo }};width:{{ c.span }};transform:translateY(-50%);transition:all 1s ease;"></div>
+              <div style="position:absolute;top:50%;left:{{ c.okL }};transform:translate(-50%,-50%);width:13px;height:13px;border-radius:50%;border:2px solid {{ c.color }};background:#ffffff;transition:left 1.1s cubic-bezier(.2,.7,.2,1);"></div>
+              <div style="position:absolute;top:50%;left:{{ c.capL }};transform:translate(-50%,-50%);width:13px;height:13px;border-radius:50%;background:{{ c.color }};transition:left 1.1s cubic-bezier(.2,.7,.2,1) .2s;"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-top:6px;font-family:var(--font-mono);font-size:11px;color:var(--color-neutral-700);"><span>○ correct {{ c.ok }}</span><span>● captured {{ c.cap }}</span></div>
+          </div>
+        </sc-for>
+      </div>
+      <figcaption style="margin-top:18px;font-size:14px;line-height:1.5;color:var(--color-neutral-700);">Pooled over D-LIT and D-HARD; axis 0.3 to 1.0. Jev-1.13’s English condition does not show the inversion.</figcaption>
+    </figure>
+    <figure class="blueprint" style="margin:0;padding:24px;">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Selective prediction · AURC under D-LIT (lower is better)</div>
+      <div style="margin-top:24px;display:flex;flex-direction:column;gap:22px;">
+        <sc-for list="{{ aurc }}" as="a" hint-placeholder-count="3">
+          <div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600;margin-bottom:8px;"><span style="color:{{ a.color }};">{{ a.mk }}</span>{{ a.name }}</div>
+            <div style="display:grid;grid-template-columns:96px minmax(0,1fr) 48px;gap:6px 10px;align-items:center;font-family:var(--font-mono);font-size:11px;">
+              <span style="color:var(--color-neutral-700);">confidence</span>
+              <div style="height:14px;background:var(--color-neutral-100);"><div style="height:100%;width:{{ a.cW }};background:{{ a.color }};transition:width 1.1s cubic-bezier(.2,.7,.2,1);"></div></div>
+              <span>{{ a.c }}</span>
+              <span style="color:var(--color-neutral-700);">random gate</span>
+              <div style="height:14px;background:var(--color-neutral-100);"><div style="height:100%;width:{{ a.rW }};border:1px solid {{ a.color }};box-sizing:border-box;background:{{ a.hatch }};transition:width 1.1s cubic-bezier(.2,.7,.2,1) .15s;"></div></div>
+              <span>{{ a.r }}</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <figcaption style="margin-top:18px;font-size:14px;line-height:1.5;color:var(--color-neutral-700);">On both open arms the confidence-gated AURC is worse than gating at random. Jev-1.13 is well calibrated in English (ECE 0.014) and not on the same items in Bengali (ECE 0.135), where its advantage over a random gate falls from 5.2× to 1.4×.</figcaption>
+    </figure>
+  </div>
+</section>
+<section style="max-width:1120px;margin:0 auto;padding:64px 24px 40px;">
+  <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">§ 5.3 · Semantics-free control</div>
+  <h2 style="margin:12px 0 0;font-size:clamp(28px,3.4vw,40px);font-weight:500;letter-spacing:-0.015em;max-width:26ch;text-wrap:balance;">Confident on a list that says nothing</h2>
+  <p style="margin:18px 0 0;font-size:18px;line-height:1.6;max-width:66ch;color:var(--color-neutral-800);text-wrap:pretty;">The O4 ablation replaces every option’s text with a bare ordinal label, so the four options are distinguishable but carry no meaning. Expected accuracy is 0.25 and whatever confidence survives is overconfidence. The best-calibrated model under real options is the worst here: Jev-1.13 reports 0.815 mean confidence at 0.254 accuracy.</p>
+  <figure data-reveal="o4" class="blueprint" style="margin:44px 0 0;padding:clamp(20px,3vw,32px);">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Figure 7 · O4 ablation</div>
+    <div style="margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:40px;align-items:center;">
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <sc-for list="{{ o4Opts }}" as="o" hint-placeholder-count="4">
+          <div data-o4 style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--color-divider);cursor:pointer;">
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--color-neutral-700);">{{ o.letter }}</span>
+            <span style="position:relative;height:22px;overflow:hidden;">
+              <span data-o4-real style="position:absolute;inset:0;display:flex;align-items:center;font-size:15px;transform:translateY({{ o.y1 }});opacity:{{ o.o1 }};transition:all .7s cubic-bezier(.65,0,.25,1) {{ o.d }};">{{ o.real }}</span>
+              <span data-o4-blank style="position:absolute;inset:0;display:flex;align-items:center;font-size:15px;font-family:var(--font-mono);color:var(--color-accent-700);transform:translateY({{ o.y2 }});opacity:{{ o.o2 }};transition:all .7s cubic-bezier(.65,0,.25,1) {{ o.d }};">{{ o.blank }}</span>
+            </span>
+          </div>
+        </sc-for>
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--color-neutral-700);margin-top:6px;">অর্থ 1–4 for the Bengali arms, meaning 1–4 for the commercial one</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div style="font-size:14px;color:var(--color-neutral-700);">Overconfidence: mean confidence minus accuracy</div>
+        <sc-for list="{{ o4 }}" as="g" hint-placeholder-count="3">
+          <div style="display:grid;grid-template-columns:110px minmax(0,1fr) 52px;gap:12px;align-items:center;">
+            <span style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600;"><span style="color:{{ g.color }};">{{ g.mk }}</span>{{ g.name }}</span>
+            <div style="height:26px;background:repeating-linear-gradient(90deg,transparent 0 calc(20% - 1px),var(--color-divider) calc(20% - 1px) 20%);"><div style="height:100%;width:{{ g.w }};background:{{ g.color }};transition:width 1.2s cubic-bezier(.2,.7,.2,1);"></div></div>
+            <span style="font-family:var(--font-mono);font-size:13px;">{{ g.v }}</span>
+          </div>
+        </sc-for>
+        <div style="font-size:14px;line-height:1.5;color:var(--color-neutral-700);">Scale 0 to 0.6. Lod-lille, the weakest of the three on accuracy, is the only one whose confidence collapses appropriately (0.282). Jev-1.13’s answer-present field still reports 0.754, against 0.946 with full glosses.</div>
+      </div>
+    </div>
+  </figure>
+</section>
+<section style="max-width:1120px;margin:0 auto;padding:64px 24px 40px;">
+  <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">§ 5.4 · Option order</div>
+  <h2 style="margin:12px 0 0;font-size:clamp(28px,3.4vw,40px);font-weight:500;letter-spacing:-0.015em;max-width:26ch;text-wrap:balance;">Order sensitivity is architecture-specific</h2>
+  <p style="margin:18px 0 0;font-size:18px;line-height:1.6;max-width:66ch;color:var(--color-neutral-800);text-wrap:pretty;">Every item is run under all 4! = 24 orderings of a fixed option set. The marker-based scorer changes its chosen gloss on 83.7% of items against 10.7% for the independent-option scorer and 13.3% for the commercial one. Lod-lille is documented as order-independent by construction; a single option’s own score travels 4.0×10<sup>−2</sup> at the median item. Permuting a list also relabels it, so this measures display order and labeling together.</p>
+  <div data-reveal="order" style="margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:40px;">
+    <figure class="blueprint" style="margin:0;padding:24px;">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;">
+        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Schematic · 24 orderings</div>
+        <div data-perm-n style="font-family:var(--font-mono);font-size:11px;color:var(--color-neutral-700);font-variant-numeric:tabular-nums;">ordering {{ permN }} / 24</div>
+      </div>
+      <div style="margin-top:20px;display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;">
+        <div style="display:flex;flex-direction:column;">
+          <span style="height:52px;display:flex;align-items:center;font-family:var(--font-mono);font-size:12px;color:var(--color-neutral-700);">A</span>
+          <span style="height:52px;display:flex;align-items:center;font-family:var(--font-mono);font-size:12px;color:var(--color-neutral-700);">B</span>
+          <span style="height:52px;display:flex;align-items:center;font-family:var(--font-mono);font-size:12px;color:var(--color-neutral-700);">C</span>
+          <span style="height:52px;display:flex;align-items:center;font-family:var(--font-mono);font-size:12px;color:var(--color-neutral-700);">D</span>
+        </div>
+        <div style="position:relative;height:208px;">
+          <sc-for list="{{ permChips }}" as="p" hint-placeholder-count="4">
+            <div data-perm-chip style="position:absolute;left:0;right:0;top:0;height:44px;transform:translateY({{ p.y }});transition:transform .8s cubic-bezier(.65,0,.25,1);display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 12px;border:1px solid {{ p.bd }};background:#ffffff;box-sizing:border-box;">
+              <span style="font-size:15px;">{{ p.text }}</span>
+              <span data-perm-picks style="display:flex;gap:6px;font-size:14px;"><sc-for list="{{ p.picks }}" as="k" hint-placeholder-count="0"><span style="color:{{ k.color }};">{{ k.mk }}</span></sc-for></span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <figcaption style="margin-top:14px;font-size:14px;line-height:1.5;color:var(--color-neutral-700);">Illustration only. Here Laya-ml’s pick follows slot B, its most-chosen slot (37.2% against 14.6% for slot A); Lod-lille and Jev-1.13 hold their choice. Measured rates are on the right.</figcaption>
+    </figure>
+    <figure class="blueprint" style="margin:0;padding:24px;">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Table 21 · Option-order sensitivity</div>
+      <div style="margin-top:20px;display:flex;flex-direction:column;gap:22px;">
+        <sc-for list="{{ orderRows }}" as="r" hint-placeholder-count="3">
+          <div>
+            <div style="font-size:15px;font-weight:600;margin-bottom:8px;">{{ r.label }}</div>
+            <div style="display:flex;flex-direction:column;gap:5px;">
+              <sc-for list="{{ r.bars }}" as="b" hint-placeholder-count="3">
+                <div style="display:grid;grid-template-columns:20px minmax(0,1fr) 52px;gap:8px;align-items:center;">
+                  <span style="color:{{ b.color }};font-size:13px;">{{ b.mk }}</span>
+                  <div style="height:14px;background:var(--color-neutral-100);"><div style="height:100%;width:{{ b.w }};background:{{ b.color }};transition:width 1.1s cubic-bezier(.2,.7,.2,1);"></div></div>
+                  <span style="font-family:var(--font-mono);font-size:12px;">{{ b.v }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <figcaption style="margin-top:18px;font-size:14px;line-height:1.5;color:var(--color-neutral-700);">n = 992 / 299 / 300. A 7.8× difference in answer stability and a 12× difference in the within-item range of p(gold).</figcaption>
+    </figure>
+  </div>
+</section>
+<section style="max-width:1120px;margin:0 auto;padding:64px 24px 40px;">
+  <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">§ 5.5 · Unit integrity (E3)</div>
+  <h2 style="margin:12px 0 0;font-size:clamp(28px,3.4vw,40px);font-weight:500;letter-spacing:-0.015em;max-width:26ch;text-wrap:balance;">Breaking the idiom barely registers; context does</h2>
+  <p style="margin:18px 0 0;font-size:18px;line-height:1.6;max-width:66ch;color:var(--color-neutral-800);text-wrap:pretty;">The expression is perturbed while the option list is held fixed, under D-LIT. A model holding the idiom as a stored unit should collapse under shuffling. Neither does. The one manipulation that clearly helps both is embedding the idiom in its gold carrier sentence.</p>
+  <figure data-reveal="e3" class="blueprint" style="margin:44px 0 0;padding:clamp(20px,3vw,32px);">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Accuracy under perturbation · Laya n = 1,778, Lod n = 180</div>
+      <div style="display:flex;gap:16px;font-size:13px;"><span><span style="color:var(--color-accent-800);">●</span> Laya-ml</span><span><span style="color:var(--color-accent-500);">■</span> Lod-lille</span><span style="color:var(--color-neutral-700);">- - chance 0.250</span></div>
+    </div>
+    <div style="margin-top:22px;display:flex;flex-direction:column;gap:14px;">
+      <sc-for list="{{ e3 }}" as="p" hint-placeholder-count="6">
+        <div style="display:grid;grid-template-columns:minmax(120px,170px) minmax(0,1fr);gap:16px;align-items:center;">
+          <div style="font-size:15px;font-weight:{{ p.fw }};">{{ p.label }}</div>
+          <div style="position:relative;display:flex;flex-direction:column;gap:4px;">
+            <div style="position:absolute;top:-4px;bottom:-4px;left:62.5%;border-left:1px dashed var(--color-text);"></div>
+            <sc-for list="{{ p.bars }}" as="b" hint-placeholder-count="2">
+              <div style="display:flex;align-items:center;gap:8px;">
+                <div style="height:13px;width:{{ b.w }};background:{{ b.color }};transition:width 1.1s cubic-bezier(.2,.7,.2,1) {{ b.delay }};"></div>
+                <span style="font-family:var(--font-mono);font-size:11px;">{{ b.v }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <figcaption style="margin-top:18px;font-size:14px;line-height:1.5;color:var(--color-neutral-700);">Scale 0 to 0.40. Under word-shuffling the open arms return the same option as intact on 0.742 and 0.917 of items. Carrier sentence: +0.080 and +0.117.</figcaption>
+  </figure>
+</section>
+<section style="max-width:1120px;margin:0 auto;padding:64px 24px 40px;">
+  <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Qualitative · the clearest captures</div>
+  <h2 style="margin:12px 0 0;font-size:clamp(28px,3.4vw,40px);font-weight:500;letter-spacing:-0.015em;max-width:26ch;text-wrap:balance;">p = 1.000 on the literal, 0.000 on the gold</h2>
+  <div style="margin-top:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:28px;">
+    <sc-for list="{{ captures }}" as="c" hint-placeholder-count="4">
+      <div class="blueprint" style="padding:22px;display:flex;flex-direction:column;gap:14px;">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div style="font-family:'Noto Serif Bengali',serif;font-size:34px;line-height:1.2;">{{ c.idiom }}</div>
+        <div style="display:flex;flex-direction:column;gap:4px;">
+          <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:11px;color:var(--color-accent-800);"><span>LITERAL · CHOSEN</span><span>1.000</span></div>
+          <div style="font-family:'Noto Serif Bengali','Source Serif 4',serif;font-size:15px;line-height:1.5;padding:8px 10px;background:var(--color-accent-100);border:1px solid var(--color-accent-800);">{{ c.lit }}</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px;">
+          <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:11px;color:var(--color-neutral-700);"><span>GOLD · REJECTED</span><span>0.000</span></div>
+          <div style="font-family:'Noto Serif Bengali','Source Serif 4',serif;font-size:15px;line-height:1.5;padding:8px 10px;border:1px dashed var(--color-divider);color:var(--color-neutral-800);">{{ c.gold }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <p style="margin:18px 0 0;font-size:14px;color:var(--color-neutral-700);">Laya-ml, D-LIT, full Bengali run. Glosses are the corpus’s own.</p>
+</section>
+<section id="explore" style="max-width:1120px;margin:0 auto;padding:72px 24px 40px;">
+  <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Interactive figures · per-arm analysis outputs</div>
+  <h2 style="margin:12px 0 0;font-size:clamp(28px,3.4vw,40px);font-weight:500;letter-spacing:-0.015em;max-width:26ch;text-wrap:balance;">Explore the results</h2>
+  <p style="margin:18px 0 0;font-size:18px;line-height:1.6;max-width:66ch;color:var(--color-neutral-800);text-wrap:pretty;">Hover any point for its value and interval. All intervals are 95% percentile bootstrap over items. Chance is 0.250 throughout.</p>
+  <div style="margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:36px;">
+    <figure class="blueprint" style="margin:0;padding:22px;min-width:0;grid-column:1 / -1;">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Model × language · n = 3,265 per cell</div>
+      <div style="margin-top:6px;font-size:19px;font-weight:600;line-height:1.25;">Accuracy against literal capture, Bengali → English</div>
+      <div data-plot="scatter" style="margin-top:12px;width:100%;height:420px;"></div>
+      <figcaption style="margin-top:10px;font-size:14px;line-height:1.5;color:var(--color-neutral-700);text-wrap:pretty;">Each arm moves from its Bengali cell (filled) to its English cell (open) on the same paired items. Capture is not ordered by accuracy: in Bengali, Lod-lille is more accurate than Laya-ml and more captured; Jev-1.13 is the most accurate and least captured.</figcaption>
+    </figure>
+    <figure class="blueprint" style="margin:0;padding:22px;min-width:0;">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">E1 · Distractor ladder, full sets</div>
+      <div style="margin-top:6px;font-size:19px;font-weight:600;line-height:1.25;">Accuracy by distractor family</div>
+      <div data-plot="ladder" style="margin-top:12px;width:100%;height:320px;"></div>
+      <figcaption style="margin-top:10px;font-size:14px;line-height:1.5;color:var(--color-neutral-700);text-wrap:pretty;">Laya-ml n = 8,876, Lod-lille n = 888. Shaded families contain the idiom’s own literal gloss; both arms fall below chance there.</figcaption>
+    </figure>
+    <figure class="blueprint" style="margin:0;padding:22px;min-width:0;">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Table 3 · Construction cues</div>
+      <div style="margin-top:6px;font-size:19px;font-weight:600;line-height:1.25;">Bengali LAR under D-LIT, split by lexical cue</div>
+      <div data-plot="cues" style="margin-top:12px;width:100%;height:320px;"></div>
+      <figcaption style="margin-top:10px;font-size:14px;line-height:1.5;color:var(--color-neutral-700);text-wrap:pretty;">Verbatim overlap and the Latin-script cue each buy some capture. With both absent (n = 2,480 / 266), LAR stays at 0.560 and 0.891.</figcaption>
+    </figure>
+    <figure class="blueprint" style="margin:0;padding:22px;min-width:0;">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">E4 · Failure localization</div>
+      <div style="margin-top:6px;font-size:19px;font-weight:600;line-height:1.25;">Accuracy by task language and checkpoint</div>
+      <div data-plot="xling" style="margin-top:12px;width:100%;height:320px;"></div>
+      <figcaption style="margin-top:10px;font-size:14px;line-height:1.5;color:var(--color-neutral-700);text-wrap:pretty;">Random distractors. Hatched bars are English input. Laya-ml’s English-only checkpoint on Bengali script (the control) sits at 0.283.</figcaption>
+    </figure>
+    <figure class="blueprint" style="margin:0;padding:22px;min-width:0;">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">E4 · Paired items</div>
+      <div style="margin-top:6px;font-size:19px;font-weight:600;line-height:1.25;">Where each arm is right in only one language</div>
+      <div data-plot="local" style="margin-top:12px;width:100%;height:320px;"></div>
+      <figcaption style="margin-top:10px;font-size:14px;line-height:1.5;color:var(--color-neutral-700);text-wrap:pretty;">Share of items answered correctly in one language and wrongly in the other. The asymmetry runs toward English in both open arms.</figcaption>
+    </figure>
+    <figure class="blueprint" style="margin:0;padding:22px;min-width:0;">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Calibration · Brier score, lower is better</div>
+      <div style="margin-top:6px;font-size:19px;font-weight:600;line-height:1.25;">Worse than declining to choose</div>
+      <div data-plot="brier" style="margin-top:12px;width:100%;height:320px;"></div>
+      <figcaption style="margin-top:10px;font-size:14px;line-height:1.5;color:var(--color-neutral-700);text-wrap:pretty;">Multiclass Brier under the literal condition. A uniform 0.25 on all four options scores exactly 0.750 (dashed). Both open arms land above it.</figcaption>
+    </figure>
+    <figure class="blueprint" style="margin:0;padding:22px;min-width:0;">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Calibration · ECE, 15 equal-width bins</div>
+      <div style="margin-top:6px;font-size:19px;font-weight:600;line-height:1.25;">Calibration degrades under the literal shift</div>
+      <div data-plot="ece" style="margin-top:12px;width:100%;height:320px;"></div>
+      <figcaption style="margin-top:10px;font-size:14px;line-height:1.5;color:var(--color-neutral-700);text-wrap:pretty;">Expected calibration error under random distractors and under D-LIT. Jev-1.13’s condition is English.</figcaption>
+    </figure>
+    <figure class="blueprint" style="margin:0;padding:22px;min-width:0;grid-column:1 / -1;">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">E6 · Option-side ablation</div>
+      <div style="margin-top:6px;font-size:19px;font-weight:600;line-height:1.25;">Accuracy as the option text is degraded</div>
+      <div data-plot="ablate" style="margin-top:12px;width:100%;height:340px;"></div>
+      <figcaption style="margin-top:10px;font-size:14px;line-height:1.5;color:var(--color-neutral-700);text-wrap:pretty;">Random distractors. Scrambling the words inside every option costs little; removing semantics drops both arms to chance (McNemar between them p = 0.76).</figcaption>
+    </figure>
+  </div>
+</section>
+<section style="max-width:1120px;margin:0 auto;padding:64px 24px 40px;">
+  <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">§ 5.4–5.7 · What else the instrument shows</div>
+  <div style="margin-top:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));border-top:1px solid var(--color-text);">
+    <sc-for list="{{ more }}" as="x" hint-placeholder-count="3">
+      <div style="padding:24px 24px 24px 0;border-bottom:1px solid var(--color-divider);display:flex;flex-direction:column;gap:10px;">
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--color-accent-700);">{{ x.sec }}</div>
+        <div style="font-size:20px;font-weight:600;line-height:1.25;">{{ x.title }}</div>
+        <div style="font-size:15px;line-height:1.55;color:var(--color-neutral-800);text-wrap:pretty;">{{ x.body }}</div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+<section style="max-width:1120px;margin:0 auto;padding:64px 24px 40px;">
+  <figure class="blueprint" style="margin:0;padding:clamp(20px,3vw,32px);">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Table 6 · One item exactly as received by the models</div>
+    <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-top:16px;">
+      <span style="font-family:'Noto Serif Bengali',serif;font-size:40px;">ওজন</span>
+      <span style="font-style:italic;font-size:19px;color:var(--color-neutral-700);">ojon · literally “physical weight” · English equivalent <em>carry weight</em></span>
+    </div>
+    <div style="overflow-x:auto;margin-top:20px;">
+      <sc-raw-table style="width:100%;border-collapse:collapse;font-size:15px;min-width:560px;">
+        <sc-raw-thead>
+          <sc-raw-tr style="border-bottom:1px solid var(--color-text);font-family:var(--font-mono);font-size:11px;color:var(--color-neutral-700);text-align:left;">
+            <sc-raw-th style="padding:8px 8px 8px 0;font-weight:400;"></sc-raw-th><sc-raw-th style="padding:8px;font-weight:400;">option text, as supplied</sc-raw-th><sc-raw-th style="padding:8px;font-weight:400;">role</sc-raw-th><sc-raw-th style="padding:8px;font-weight:400;"><span style="color:var(--color-accent-800);">●</span> Laya-ml p</sc-raw-th><sc-raw-th style="padding:8px;font-weight:400;"><span style="color:var(--color-neutral-500);">▲</span> Jev-1.13 p</sc-raw-th>
+          </sc-raw-tr>
+        </sc-raw-thead>
+        <sc-raw-tbody>
+          <sc-for list="{{ item6 }}" as="t" hint-placeholder-count="4">
+            <sc-raw-tr style="border-bottom:1px solid var(--color-divider);background:{{ t.bg }};">
+              <sc-raw-td style="padding:12px 8px 12px 0;font-family:var(--font-mono);font-size:12px;">{{ t.l }}</sc-raw-td>
+              <sc-raw-td style="padding:12px 8px;font-family:'Noto Serif Bengali','Source Serif 4',serif;">{{ t.text }}</sc-raw-td>
+              <sc-raw-td style="padding:12px 8px;font-style:italic;">{{ t.role }}</sc-raw-td>
+              <sc-raw-td style="padding:12px 8px;font-family:var(--font-mono);font-weight:{{ t.wa }};">{{ t.a }}</sc-raw-td>
+              <sc-raw-td style="padding:12px 8px;font-family:var(--font-mono);font-weight:{{ t.wb }};">{{ t.b }}</sc-raw-td>
+            </sc-raw-tr>
+          </sc-for>
+        </sc-raw-tbody>
+      </sc-raw-table>
+    </div>
+    <figcaption style="margin-top:16px;font-size:14px;line-height:1.5;color:var(--color-neutral-700);">Laya-ml places 0.99 on the literal option, which denotes the physical weight of an object, and 0.00 on the gold figurative gloss; Jev-1.13 places 0.82 on the gold option.</figcaption>
+  </figure>
+</section>
+<section id="cite" style="border-top:1px solid var(--color-divider);margin-top:56px;">
+  <div style="max-width:1120px;margin:0 auto;padding:72px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:40px;">
+    <div style="display:flex;flex-direction:column;gap:16px;">
+      <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">Citation</div>
+      <p style="margin:0;font-size:16px;line-height:1.55;color:var(--color-neutral-800);">We release the instrument and the per-item outputs.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a class="btn btn-primary blueprint" href="https://github.com/sakhadib/literal-lock-in" target="_blank" rel="noopener" style="padding:10px 18px;font-family:var(--font-mono);font-size:13px;color:#ffffff;text-decoration:none;"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>GitHub ↗</a>
+        <a class="btn btn-secondary" href="https://arxiv.org/abs/2610.22526" target="_blank" rel="noopener" style="padding:10px 18px;font-family:var(--font-mono);font-size:13px;color:var(--color-text);text-decoration:none;">arXiv:2610.22526</a>
+        <button class="btn btn-secondary" sc-camel-on-click="{{ copyBib }}" style="padding:10px 18px;font-family:var(--font-mono);font-size:13px;cursor:pointer;background:transparent;">{{ copyLabel }}</button>
+      </div>
+    </div>
+    <pre class="blueprint" style="grid-column:span 2;margin:0;padding:24px;font-family:var(--font-mono);font-size:13px;line-height:1.65;overflow-x:auto;white-space:pre;"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>{{ bibtex }}</pre>
+  </div>
+</section>
+<footer style="border-top:1px solid var(--color-divider);">
+  <div style="max-width:1120px;margin:0 auto;padding:28px 24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--color-neutral-700);">
+    <span>Adib Sakhawat and Syed Rifat Raiyan · Islamic University of Technology</span>
+    <a href="https://github.com/sakhadib/literal-lock-in">github.com/sakhadib/literal-lock-in</a>
+  </div>
+</footer>
+</div>
