@@ -141,6 +141,9 @@ def build_data():
     d["famSlots"] = fam_slots("D-LIT")
     d["famDesc"] = FAM["D-LIT"]["d"]
 
+    d["bibtex"] = BIB
+    d["copyLabel"] = "Copy BibTeX"
+
     d["experiments"] = [
         {"id": "E1", "text": "The distractor family"}, {"id": "E2", "text": "The idiom’s surface form"},
         {"id": "E3", "text": "The idiom as a unit"}, {"id": "E4", "text": "The task language"},
@@ -587,9 +590,28 @@ def head():
 """
 
 
+def check_bindings(body, data):
+    """Every {{ name }} in the template must resolve to something.
+
+    An unresolved placeholder renders as an empty string rather than failing,
+    which is how the BibTeX block once came out blank.
+    """
+    loop_vars = set(re.findall(r'<sc-for\b[^>]*\bas="(\w+)"', body))
+    names = {m.group(1) for m in PH.finditer(body)}
+
+    def root(n):
+        return n.split(".")[0] if "." in n else n
+
+    missing = sorted(n for n in names
+                     if root(n) not in data and root(n) not in loop_vars)
+    if missing:
+        raise SystemExit(f"template placeholders with no data: {missing}")
+
+
 def main():
     data = build_data()
     body = (SRC / "template.html").read_text(encoding="utf-8")
+    check_bindings(body, data)
     body = expand(body, data)
     body = clean(body)
     body = mark_grow(body)
