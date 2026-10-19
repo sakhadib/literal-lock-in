@@ -4,6 +4,7 @@
   Adib Sakhawat* &nbsp;·&nbsp; Syed Rifat Raiyan* &nbsp;·&nbsp; Islamic University of Technology &nbsp;·&nbsp; *equal contribution
 </p>
 <p align="center">
+  <a href="https://arxiv.org/abs/2610.22526">Preprint (arXiv:2610.22526)</a> ·
   <a href="paper/acl_latex.pdf">Paper (PDF)</a> ·
   <a href="docs/index.html">Interactive site</a> ·
   <a href="#citation">BibTeX</a> ·
@@ -226,9 +227,15 @@ Exactly one condition is identical across all three arms (the fully-Bengali
   author = {Sakhawat, Adib and Raiyan, Syed Rifat},
   year   = {2026},
   note   = {Equal contribution},
+  eprint = {2610.22526},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
   url    = {https://github.com/sakhadib/literal-lock-in}
 }
 ```
+
+Preprint: [arXiv:2610.22526](https://arxiv.org/abs/2610.22526) (cs.CL, submitted
+15 Oct 2026) · DOI [10.48550/arXiv.2610.22526](https://doi.org/10.48550/arXiv.2610.22526).
 
 ## License
 
@@ -239,7 +246,10 @@ redistributed as published and remains under its own terms.
 
 `paper/acl_latex.tex` is the **anonymous review build** (`\author{Anonymous
 Submission}`, pointing at the anonymized artifact link) — it is kept that way on
-purpose so the build can be submitted unmodified. This repository is the
-de-anonymized artifact it points to. `docs/index.html` is a single self-contained
-file: the paper PDF, the fonts and React are inlined, so it renders offline and
-hosts unchanged on GitHub Pages.
+purpose so the build can be submitted unmodified. The published version of record
+is the [arXiv preprint](https://arxiv.org/abs/2610.22526); this repository is the
+de-anonymized artifact. `docs/index.html` is a single self-contained file: the
+paper PDF, the fonts and React are inlined, so it renders offline and hosts
+unchanged on GitHub Pages. Its "Review build (PDF)" button serves the same
+anonymous build the repository ships, which is why the preprint link is the one
+to cite from.
