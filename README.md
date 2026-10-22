@@ -46,7 +46,7 @@ options the caller supplies, so what you put in the list is a controlled
 manipulation, not a prompt.
 
 The corpus makes it possible because every row already ships two certified
-readings. **Bangla Bagdhara** (Kaggle: `sakhadib/bangla-bagdhara`) annotates
+readings. **Bangla Bagdhara** (Kaggle: `sakhadib/bangla-bagdhara`) and (Huggingface : https://huggingface.co/datasets/sakhadib/bangla-bagdhara) annotates
 10,361 Bengali idioms under a 19-field expert schema: a gold figurative meaning,
 **and** an expert literal gloss. That gloss is a human-certified counterfactual
 distractor already sitting in the data. No annotation was added for this study;
